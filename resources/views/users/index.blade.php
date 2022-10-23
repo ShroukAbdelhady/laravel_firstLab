@@ -8,6 +8,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
+   <div style="float:right">
+    <form action="{{ route('user.create')}}" class="d-inline">
+         <button class="btn btn-info"> Add User </button>
+        </form>
+   </div>
+
 <table class="table">
   <thead class="table-dark">
     <tr>
@@ -26,9 +32,6 @@
       <td>{{ $user->name }}</td>
       <td>{{ $user->email }}</td>
       <td >
-        <form action="{{ route('user.create')}}" class="d-inline">
-         <button class="btn btn-info"> Add </button>
-        </form>
          <form action="{{ route('user.show',$user->id) }}" class="d-inline" >
          <button class="btn btn-success">show</button>
         </form>
